@@ -1,0 +1,60 @@
+type Account @entity {
+
+  id: ID! #AccountId
+}
+
+
+type SalpContributed @entity {
+
+  id: ID! #id is a required field
+
+  account: Account! #Foreign key to Account Entity
+
+  event: String! #Event name
+
+  token: String! #Token symbol
+
+  amount: BigInt! #Amount of BNC voted
+
+  blockHeight: Int! #Block height of the event
+
+  timestamp: Date!  #Timestamp of the event
+
+}
+
+type VsBondMarket @entity {
+
+  id: ID! #id is a required field
+
+  account: Account! #Foreign key to Account Entity
+
+  event: String! #Event name
+
+  token: String! #Token symbol
+
+  amount: BigInt! #Amount of BNC voted
+
+  blockHeight: Int! #Block height of the event
+
+  timestamp: Date!  #Timestamp of the event
+
+}
+
+type VsKsmTransaction @entity {
+
+  id: ID! #id is a required field
+
+  account: Account! #Foreign key to Account Entity
+
+  event: String! #Event name
+
+  token: String! #Token symbol
+
+  amount: BigInt! #Amount of BNC voted
+
+  blockHeight: Int! #Block height of the event
+
+  timestamp: Date!  #Timestamp of the event
+
+}
+
